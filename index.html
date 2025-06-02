@@ -4,483 +4,823 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DressForPleasure - Premium Mode & Accessoires</title>
-    <meta name="description" content="Exklusive Mode und Accessoires für anspruchsvolle Frauen. Handverlesene Designer-Stücke, premium Qualität und persönlicher Service.">
-    <meta name="keywords" content="Designer Mode, Premium Kleidung, Handtaschen, Schmuck, Damen Mode, Luxus Fashion">
-    
-    <!-- Fonts -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='80'%3E👗%3C/text%3E%3C/svg%3E">
-    
-    <!-- Meta Tags for Social Media -->
-    <meta property="og:title" content="DressForPleasure - Premium Mode & Accessoires">
-    <meta property="og:description" content="Entdecken Sie exklusive Designer-Mode und luxuriöse Accessoires für jeden Anlass.">
-    <meta property="og:image" content="https://dressforpleasure.com/images/og-image.jpg">
-    <meta property="og:url" content="https://dressforpleasure.com">
-    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">✨ DressForPleasure ✨</div>
-            <div class="loading-spinner"></div>
-            <p>Ihr Stil erwacht zum Leben...</p>
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            
-            <!-- Logo -->
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
             <div class="logo">
-                <h1>✨ DressForPleasure</h1>
-                <span class="tagline">Premium Mode & Accessoires</span>
+                <h1>DressForPleasure</h1>
+                <span>Premium Mode & Accessoires</span>
             </div>
-            
-            <!-- Navigation Links -->
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#products" class="nav-link">Kollektionen</a></li>
-                <li><a href="#about" class="nav-link">Über uns</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
-            </ul>
-            
-            <!-- Action Buttons -->
-            <div class="nav-actions">
-                <button class="search-btn" id="search-btn">🔍</button>
-                <button class="cart-btn" id="cart-btn">
-                    🛍️ <span class="cart-count">0</span>
-                </button>
-                <button class="telegram-btn" id="telegram-btn">💬 Bot</button>
+            <div class="nav-links">
+                <a href="#shop">Shop</a>
+                <a href="#about">Über uns</a>
+                <a href="#kontakt">Kontakt</a>
+                <a href="#telegram-bot">Style Assistant</a>
+                <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <main>
-        <section id="home" class="hero">
-            <div class="hero-background">
-                <div class="hero-overlay"></div>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Entdecken Sie Ihren perfekten Style</h2>
+            <p>Premium Mode und Accessoires, die Ihre Persönlichkeit unterstreichen</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToShop()">Jetzt Shoppen</button>
+                <button class="btn-secondary" onclick="openTelegramBot()">KI Style-Beratung</button>
             </div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        <span class="hero-subtitle">Wo Eleganz auf</span>
-                        <span class="hero-main">Leidenschaft</span>
-                        <span class="hero-subtitle">trifft</span>
-                    </h1>
-                    <p class="hero-description">
-                        Entdecken Sie handverlesene Designer-Stücke und exklusive Kollektionen für anspruchsvolle Frauen, die Wert auf Stil und Qualität legen.
-                    </p>
-                    <div class="hero-actions">
-                        <button class="btn btn-primary" id="shop-now-btn">
-                            Jetzt entdecken
-                        </button>
-                        <button class="btn btn-secondary" id="style-quiz-btn">
-                            Style-Quiz
-                        </button>
-                    </div>
-                </div>
-                <div class="hero-features">
-                    <div class="feature">
-                        <span class="feature-icon">🚚</span>
-                        <span>Kostenloser Versand ab 50€</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">🔄</span>
-                        <span>30 Tage Rückgaberecht</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature-icon">💎</span>
-                        <span>Premium-Qualität</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="Fashion Hero" />
+        </div>
+    </section>
 
-        <!-- Product Categories -->
-        <section id="products" class="products-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Unsere Kollektionen</h2>
-                    <p class="section-subtitle">Handverlesene Stücke für jeden Anlass</p>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h3>Warum DressForPleasure?</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">🤖</div>
+                    <h4>KI Style-Assistent</h4>
+                    <p>Erhalten Sie personalisierte Styling-Tipps über unseren Telegram-Bot</p>
                 </div>
-                
-                <div class="category-filter">
-                    <button class="filter-btn active" data-category="all">Alle</button>
-                    <button class="filter-btn" data-category="oberteile">Oberteile</button>
-                    <button class="filter-btn" data-category="kleider">Kleider</button>
-                    <button class="filter-btn" data-category="handtaschen">Handtaschen</button>
-                    <button class="filter-btn" data-category="schmuck">Schmuck</button>
-                    <button class="filter-btn" data-category="accessoires">Accessoires</button>
+                <div class="feature">
+                    <div class="feature-icon">🚚</div>
+                    <h4>Kostenloser Versand</h4>
+                    <p>Ab 50€ Bestellwert liefern wir versandkostenfrei</p>
                 </div>
-                
-                <div class="products-grid" id="products-grid">
-                    <!-- Products will be loaded dynamically -->
-                    <div class="product-card-loading">
-                        <div class="loading-placeholder"></div>
-                        <div class="loading-text">Produkte werden geladen...</div>
-                    </div>
+                <div class="feature">
+                    <div class="feature-icon">💝</div>
+                    <h4>Premium Qualität</h4>
+                    <p>Handverlesene Mode von ausgewählten Designern</p>
                 </div>
-                
-                <div class="products-actions">
-                    <button class="btn btn-outline" id="load-more-btn">Mehr anzeigen</button>
-                    <button class="btn btn-primary" id="view-all-btn">Alle Produkte</button>
+                <div class="feature">
+                    <div class="feature-icon">🔒</div>
+                    <h4>Sichere Zahlung</h4>
+                    <p>Alle Zahlungen werden sicher über Stripe abgewickelt</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Featured Section -->
-        <section class="featured-section">
-            <div class="container">
-                <div class="featured-content">
-                    <div class="featured-text">
-                        <h2>Neu eingetroffen</h2>
-                        <p>Entdecken Sie die neuesten Trends und exklusiven Stücke unserer Herbst-Kollektion.</p>
-                        <button class="btn btn-primary">Neue Artikel ansehen</button>
-                    </div>
-                    <div class="featured-image">
-                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop&crop=center" alt="Neue Kollektion" loading="lazy">
-                    </div>
-                </div>
+    <!-- Products Section -->
+    <section id="shop" class="products">
+        <div class="container">
+            <h3>Unsere Kollektionen</h3>
+            <div class="product-filters">
+                <button class="filter-btn active" data-category="all">Alle</button>
+                <button class="filter-btn" data-category="kleider">Kleider</button>
+                <button class="filter-btn" data-category="oberteile">Oberteile</button>
+                <button class="filter-btn" data-category="hosen">Hosen</button>
+                <button class="filter-btn" data-category="accessoires">Accessoires</button>
             </div>
-        </section>
+            <div id="products-grid" class="products-grid">
+                <!-- Produkte werden dynamisch geladen -->
+                <div class="loading">Produkte werden geladen...</div>
+            </div>
+        </div>
+    </section>
 
-        <!-- About Section -->
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text">
-                        <h2>Über DressForPleasure</h2>
-                        <p class="about-intro">
-                            Seit unserer Gründung stehen wir für exklusive Mode, die Persönlichkeit und Individualität unterstreicht.
-                        </p>
-                        <div class="about-values">
-                            <div class="value">
-                                <h3>🌟 Exklusivität</h3>
-                                <p>Handverlesene Designer-Stücke, die Sie nicht überall finden.</p>
-                            </div>
-                            <div class="value">
-                                <h3>💎 Qualität</h3>
-                                <p>Nur premium Materialien und erstklassige Verarbeitung.</p>
-                            </div>
-                            <div class="value">
-                                <h3>👗 Individualität</h3>
-                                <p>Mode, die Ihre einzigartige Persönlichkeit zum Ausdruck bringt.</p>
-                            </div>
-                        </div>
-                        <blockquote class="about-quote">
-                            "Mode vergeht, Stil ist ewig." - Coco Chanel
-                        </blockquote>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500&h=600&fit=crop&crop=center" alt="DressForPleasure Team" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h3>Bleiben Sie im Trend</h3>
+            <p>Erhalten Sie exklusive Angebote und Style-Tipps direkt in Ihr Postfach</p>
+            <form id="newsletter-form" class="newsletter-form">
+                <input type="email" id="newsletter-email" placeholder="Ihre E-Mail-Adresse" required>
+                <button type="submit" class="btn-primary">Anmelden</button>
+            </form>
+        </div>
+    </section>
 
-        <!-- Services Section -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Unsere Services</h2>
-                    <p class="section-subtitle">Premium-Service für anspruchsvolle Kunden</p>
-                </div>
-                
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🤖</div>
-                        <h3>KI-Styling-Assistent</h3>
-                        <p>Persönliche Beratung durch unseren intelligenten Telegram-Bot mit KI-unterstützten Empfehlungen.</p>
-                        <button class="service-btn" id="telegram-service-btn">Bot starten</button>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">👗</div>
-                        <h3>Personal Shopping</h3>
-                        <p>Lassen Sie sich von unseren Experten beraten und entdecken Sie Ihren perfekten Stil.</p>
-                        <button class="service-btn">Termin buchen</button>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">🚚</div>
-                        <h3>Express-Lieferung</h3>
-                        <p>Ihre Bestellung am nächsten Tag - für alle spontanen Mode-Momente.</p>
-                        <button class="service-btn">Mehr erfahren</button>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">💎</div>
-                        <h3>VIP-Programm</h3>
-                        <p>Exklusive Vorteile, früher Zugang zu neuen Kollektionen und persönlicher Service.</p>
-                        <button class="service-btn">VIP werden</button>
+    <!-- Contact Section -->
+    <section id="kontakt" class="contact">
+        <div class="container">
+            <h3>Kontaktieren Sie uns</h3>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h4>DressForPleasure</h4>
+                    <p>📍 Unter den Linden 12, 10117 Berlin</p>
+                    <p>📧 style@dressforpleasure.com</p>
+                    <p>📱 +49 (0) 30 12345678</p>
+                    <div class="social-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Pinterest</a>
                     </div>
                 </div>
+                <form id="contact-form" class="contact-form">
+                    <input type="text" name="name" placeholder="Ihr Name" required>
+                    <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                    <textarea name="message" placeholder="Ihre Nachricht" required></textarea>
+                    <button type="submit" class="btn-primary">Nachricht senden</button>
+                </form>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter-section">
-            <div class="container">
-                <div class="newsletter-content">
-                    <div class="newsletter-text">
-                        <h2>Bleiben Sie stilvoll informiert</h2>
-                        <p>Erhalten Sie exklusive Angebote, Trend-Updates und Style-Tipps direkt in Ihr Postfach.</p>
+    <!-- Telegram Bot Section -->
+    <section id="telegram-bot" class="telegram-section">
+        <div class="container">
+            <h3>🤖 Ihr persönlicher Style-Assistent</h3>
+            <p>Chatten Sie mit unserem KI-gestützten Style-Bot für personalisierte Empfehlungen</p>
+            <div class="telegram-bot-info">
+                <div class="bot-features">
+                    <div class="bot-feature">
+                        <span>👗</span>
+                        <p>Outfit-Empfehlungen für jeden Anlass</p>
                     </div>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <div class="form-group">
-                            <input type="email" id="newsletter-email" placeholder="Ihre E-Mail-Adresse" required>
-                            <button type="submit" class="btn btn-primary">Anmelden</button>
-                        </div>
-                        <div class="newsletter-benefits">
-                            <span>✅ 15% Willkommensrabatt</span>
-                            <span>✅ Exklusive Previews</span>
-                            <span>✅ Style-Tipps</span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <div class="contact-content">
-                    <div class="contact-info">
-                        <h2>Kontaktieren Sie uns</h2>
-                        <p>Haben Sie Fragen oder benötigen Sie persönliche Beratung? Wir sind für Sie da!</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <div class="contact-icon">📧</div>
-                                <div class="contact-details">
-                                    <h3>E-Mail</h3>
-                                    <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4536313c2920052137203636232a3735292024363037206b262a28">[email&#160;protected]</a></p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="contact-icon">📞</div>
-                                <div class="contact-details">
-                                    <h3>Telefon</h3>
-                                    <p>+49 (0) 30 12345678</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="contact-icon">💬</div>
-                                <div class="contact-details">
-                                    <h3>Telegram Bot</h3>
-                                    <p>24/7 KI-Styling-Assistent</p>
-                                </div>
-                            </div>
-                            
-                            <div class="contact-method">
-                                <div class="contact-icon">🏢</div>
-                                <div class="contact-details">
-                                    <h3>Adresse</h3>
-                                    <p>Unter den Linden 12<br>10117 Berlin</p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="bot-feature">
+                        <span>🎨</span>
+                        <p>Farbberatung und Style-Tipps</p>
                     </div>
-                    
-                    <form class="contact-form" id="contact-form">
-                        <h3>Nachricht senden</h3>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="contact-name" placeholder="Ihr Name" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="contact-email" placeholder="Ihre E-Mail" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <select id="contact-subject" required>
-                                <option value="">Betreff auswählen</option>
-                                <option value="styling">Styling-Beratung</option>
-                                <option value="order">Bestellanfrage</option>
-                                <option value="return">Rückgabe/Umtausch</option>
-                                <option value="vip">VIP-Programm</option>
-                                <option value="other">Sonstiges</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="contact-message" placeholder="Ihre Nachricht" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Nachricht senden</button>
-                    </form>
+                    <div class="bot-feature">
+                        <span>🛍️</span>
+                        <p>Direkte Produktsuche und Bestellung</p>
+                    </div>
                 </div>
+                <button class="btn-telegram" onclick="openTelegramBot()">
+                    Bot starten: @DressForPleasureBot
+                </button>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <h3>✨ DressForPleasure</h3>
-                        <p>Premium Mode & Accessoires</p>
-                    </div>
-                    <p class="footer-description">
-                        Exklusive Designer-Mode für anspruchsvolle Frauen. Entdecken Sie zeitlose Eleganz und moderne Trends in perfekter Harmonie.
-                    </p>
-                    <div class="social-links">
-                        <a href="#" class="social-link">📸 Instagram</a>
-                        <a href="#" class="social-link">📘 Facebook</a>
-                        <a href="#" class="social-link">📌 Pinterest</a>
-                        <a href="#" class="social-link">🎵 TikTok</a>
-                    </div>
+                    <h4>DressForPleasure</h4>
+                    <p>Premium Mode & Accessoires für den modernen Lifestyle</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Shop</h4>
-                    <ul class="footer-links">
-                        <li><a href="#products">Neue Kollektion</a></li>
-                        <li><a href="#products">Oberteile</a></li>
-                        <li><a href="#products">Kleider</a></li>
-                        <li><a href="#products">Handtaschen</a></li>
-                        <li><a href="#products">Schmuck</a></li>
-                        <li><a href="#products">Sale</a></li>
-                    </ul>
+                    <h4>Quick Links</h4>
+                    <a href="#shop">Shop</a>
+                    <a href="#about">Über uns</a>
+                    <a href="#kontakt">Kontakt</a>
+                    <a href="#telegram-bot">Style Assistant</a>
                 </div>
-                
                 <div class="footer-section">
                     <h4>Service</h4>
-                    <ul class="footer-links">
-                        <li><a href="#services">KI-Stylist</a></li>
-                        <li><a href="#services">Personal Shopping</a></li>
-                        <li><a href="#services">VIP-Programm</a></li>
-                        <li><a href="#contact">Kontakt</a></li>
-                        <li><a href="#">Größentabelle</a></li>
-                        <li><a href="#">Pflegehinweise</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Information</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Über uns</a></li>
-                        <li><a href="#">Versand & Lieferung</a></li>
-                        <li><a href="#">Rückgabe & Umtausch</a></li>
-                        <li><a href="#">AGB</a></li>
-                        <li><a href="#">Datenschutz</a></li>
-                        <li><a href="#">Impressum</a></li>
-                    </ul>
+                    <a href="#">Versand & Retouren</a>
+                    <a href="#">Größenberatung</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Datenschutz</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <div class="footer-payment">
-                    <span>Sichere Zahlung:</span>
-                    <div class="payment-methods">
-                        <span>💳 Visa</span>
-                        <span>💳 Mastercard</span>
-                        <span>💰 PayPal</span>
-                        <span>🏦 SEPA</span>
-                    </div>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2024 DressForPleasure. Alle Rechte vorbehalten.</p>
-                </div>
+                <p>&copy; 2024 DressForPleasure. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Search Modal -->
-    <div class="modal" id="search-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Produktsuche</h3>
-                <button class="modal-close" id="search-modal-close">&times;</button>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Warenkorb</h3>
+            <button id="close-cart">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items werden dynamisch hinzugefügt -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Gesamt: €<span id="cart-total">0.00</span></strong>
             </div>
-            <div class="modal-body">
-                <div class="search-form">
-                    <input type="text" id="search-input" placeholder="Nach Produkten suchen..." autocomplete="off">
-                    <button id="search-submit" class="btn btn-primary">Suchen</button>
-                </div>
-                <div class="search-suggestions" id="search-suggestions">
-                    <h4>Beliebte Suchbegriffe:</h4>
-                    <div class="suggestion-tags">
-                        <span class="suggestion-tag">Seidenbluse</span>
-                        <span class="suggestion-tag">Designer Handtasche</span>
-                        <span class="suggestion-tag">Cocktailkleid</span>
-                        <span class="suggestion-tag">Cashmere</span>
-                        <span class="suggestion-tag">Vintage Schmuck</span>
-                    </div>
-                </div>
-                <div class="search-results" id="search-results" style="display: none;">
-                    <!-- Search results will be populated here -->
-                </div>
-            </div>
+            <button id="checkout-btn" class="btn-primary">Zur Kasse</button>
         </div>
     </div>
 
-    <!-- Cart Modal -->
-    <div class="modal" id="cart-modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Warenkorb</h3>
-                <button class="modal-close" id="cart-modal-close">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="cart-content" id="cart-content">
-                    <div class="empty-cart">
-                        <div class="empty-cart-icon">🛍️</div>
-                        <p>Ihr Warenkorb ist leer</p>
-                        <button class="btn btn-primary" onclick="document.getElementById('cart-modal').style.display='none'">Jetzt shoppen</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Telegram Bot Integration -->
-    <div class="telegram-widget" id="telegram-widget">
-        <div class="telegram-header">
-            <span>💬 DressForPleasure Style-Bot</span>
-            <button class="telegram-close" id="telegram-close">&times;</button>
-        </div>
-        <div class="telegram-content">
-            <p>Starten Sie eine Unterhaltung mit unserem KI-Styling-Assistenten!</p>
-            <button class="btn btn-primary" id="start-telegram-chat">Chat starten</button>
-        </div>
-    </div>
-
-    <!-- Success/Error Notifications -->
-    <div class="notification" id="notification">
-        <div class="notification-content">
-            <span class="notification-icon"></span>
-            <span class="notification-message"></span>
-            <button class="notification-close">&times;</button>
-        </div>
-    </div>
-
-    <!-- Scripts -->
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="main.js"></script>
-    
-    <!-- Analytics (placeholder) -->
-    <script>
-        // Google Analytics or other tracking code would go here
-        console.log('DressForPleasure website loaded successfully');
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
+
+2. style.css (Premium-Design):
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdf7f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Color Scheme: Gold, Braun, Lila */
+:root {
+    --primary-gold: #d4af37;
+    --secondary-brown: #8b4513;
+    --accent-purple: #6a4c93;
+    --light-cream: #fdf7f0;
+    --dark-text: #2c1810;
+    --gradient-primary: linear-gradient(135deg, var(--primary-gold), var(--accent-purple));
+    --gradient-secondary: linear-gradient(135deg, var(--secondary-brown), var(--primary-gold));
+}
+
+/* Header */
+.header {
+    background: rgba(253, 247, 240, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid var(--primary-gold);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--secondary-brown);
+    font-size: 1.8rem;
+    margin-bottom: -5px;
+}
+
+.logo span {
+    font-size: 0.8rem;
+    color: var(--accent-purple);
+    font-style: italic;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-gold);
+}
+
+.cart-icon {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    min-height: 100vh;
+    padding: 8rem 2rem 4rem;
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.hero-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--secondary-brown);
+}
+
+.btn-primary:hover {
+    background: var(--light-cream);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--secondary-brown);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Features Section */
+.features {
+    padding: 6rem 0;
+    background: white;
+}
+
+.features h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--secondary-brown);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background: var(--light-cream);
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature h4 {
+    color: var(--secondary-brown);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+/* Products Section */
+.products {
+    padding: 6rem 0;
+    background: var(--light-cream);
+}
+
+.products h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--secondary-brown);
+    margin-bottom: 3rem;
+}
+
+.product-filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--primary-gold);
+    background: transparent;
+    color: var(--secondary-brown);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--primary-gold);
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--secondary-brown);
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart:hover {
+    transform: scale(1.02);
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 4rem 0;
+    background: var(--gradient-secondary);
+    color: white;
+    text-align: center;
+}
+
+.newsletter h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.newsletter-form input {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    min-width: 300px;
+    outline: none;
+}
+
+/* Contact & Telegram Sections */
+.contact, .telegram-section {
+    padding: 6rem 0;
+}
+
+.contact {
+    background: white;
+}
+
+.telegram-section {
+    background: var(--light-cream);
+    text-align: center;
+}
+
+.contact h3, .telegram-section h3 {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--secondary-brown);
+    margin-bottom: 3rem;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-gold);
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Telegram Bot Features */
+.bot-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.bot-feature {
+    text-align: center;
+}
+
+.bot-feature span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.btn-telegram {
+    background: #0088cc;
+    color: white;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-telegram:hover {
+    background: #006bb3;
+    transform: scale(1.05);
+}
+
+/* Footer */
+.footer {
+    background: var(--secondary-brown);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--primary-gold);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-gold);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #555;
+    color: #ccc;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.cart-header {
+    padding: 2rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-header h3 {
+    color: var(--secondary-brown);
+    font-family: 'Playfair Display', serif;
+}
+
+#close-cart {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.cart-items {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    padding: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.cart-total {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--secondary-brown);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 6rem 1rem 4rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .cart-sidebar {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .newsletter-form input {
+        min-width: 280px;
+    }
+}
+
+/* Loading & Error States */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    background: #ffe6e6;
+    color: #d63384;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.success {
+    background: #e6ffe6;
+    color: #198754;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.product-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Print Styles */
+@media print {
+    .header, .footer, .cart-sidebar {
+        display: none;
+    }
+}
