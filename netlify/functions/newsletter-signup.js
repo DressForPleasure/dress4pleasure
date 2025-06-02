@@ -1,3 +1,4 @@
+
 /**
  * Netlify Function - Newsletter Signup Handler
  * Processes newsletter subscriptions and integrates with email automation
