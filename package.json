@@ -1,0 +1,57 @@
+{
+  "name": "dressforpleasure-optimized",
+  "version": "2.0.0",
+  "description": "DressForPleasure - Optimiertes luxuriöses E-Commerce System mit Gold/Braun/Lila Design",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'Static site - no build step required'",
+    "deploy": "netlify deploy --prod",
+    "test": "echo 'No tests specified'",
+    "start": "netlify dev"
+  },
+  "keywords": [
+    "ecommerce",
+    "luxury",
+    "fashion",
+    "jewelry",
+    "handbags",
+    "gold",
+    "brown",
+    "purple",
+    "premium",
+    "online-shop",
+    "stripe",
+    "netlify",
+    "responsive",
+    "german"
+  ],
+  "author": "DressForPleasure",
+  "license": "MIT",
+  "dependencies": {
+    "stripe": "^14.25.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.15.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dressforpleasure/optimized-ecommerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dressforpleasure/optimized-ecommerce/issues"
+  },
+  "homepage": "https://dressforpleasure-optimized.netlify.app",
+  "netlify": {
+    "functions": "./netlify/functions"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
